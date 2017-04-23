@@ -8,7 +8,9 @@ namespace SpeechRecognitionDemo
         static void Main()
         {
             // Initialization
-            var micClient = SpeechRecognitionServiceFactory.CreateMicrophoneClient(SpeechRecognitionMode.LongDictation, "ja-JP", "04a349ccb0bd4c4eb6d026aa5b363a7a");
+            //var micClient = SpeechRecognitionServiceFactory.CreateMicrophoneClient(SpeechRecognitionMode.LongDictation, "en-US", "04a349ccb0bd4c4eb6d026aa5b363a7a");
+            var micClient = SpeechRecognitionServiceFactory.CreateMicrophoneClient(SpeechRecognitionMode.LongDictation, "en-US", "4b790b2bf55a48898759b747e0709371");
+
             micClient.OnMicrophoneStatus += (s, e) =>
             {
                 Console.WriteLine("[{0}]", (e.Recording) ? "MIC ON" : "MIC OFF");
